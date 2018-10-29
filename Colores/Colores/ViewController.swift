@@ -9,7 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {//clase
-
+    @IBOutlet weak var citaLabel: UILabel!
+    
+    @IBOutlet weak var autorLable: UILabel!
+    
+    @IBOutlet weak var citaBoton: UIButton!
+    
+    let generadorCitas = GeneradorCitas();
+    
+    let generadorColores = GeneradorColor();
+    
     override func viewDidLoad() {//metodo
         super.viewDidLoad()//se llama cuando ya se cargaron las vistas
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,7 +30,18 @@ class ViewController: UIViewController {//clase
     }
 
     @IBAction func nuevaCita() {
+        let cita = generadorCitas.generarCitaAleatoria()
+        let color = generadorColores.generarColorAleatorio()
         print("Nueva cita Gnomo")
+//        citaLabel.text="Soy un Gnomo"
+//        autorLable.text="elGnomo"
+        
+        citaLabel.text = cita.texto
+        autorLable.text = cita.autor
+        
+        view.backgroundColor = color
+        
+        citaBoton.tintColor = color
     }
     
     

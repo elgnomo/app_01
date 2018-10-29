@@ -60,6 +60,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="autorLable" destination="dz1-3l-tCi" id="cyi-3t-af0"/>
+                        <outlet property="citaBoton" destination="VJv-FY-Evo" id="Ieb-se-qDf"/>
+                        <outlet property="citaLabel" destination="pIG-1y-7o0" id="Ahx-i3-h5y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
